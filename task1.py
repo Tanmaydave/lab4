@@ -11,4 +11,8 @@ def vocabulary_counter(a_file, start_line=1):
         new_text += stripped_line
 
 
+    word_count_dict = {}
+    for word in new_text:
+        word_count_dict[word] = word_count_dict.get(word, 0) + 1
+
    
