@@ -12,4 +12,7 @@ def stripped_text(a_file):
     new_text = []
     fin = open(a_file)
 
-   
+    for line in fin:
+        stripped_line = line.lower().translate(string.maketrans("",""), string.punctuation).split()
+        new_text += stripped_line
+    return new_text
